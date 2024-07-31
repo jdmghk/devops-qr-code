@@ -10,6 +10,10 @@ load_dotenv()
 
 app = FastAPI()
 
+
+@app.get("/")
+async def root():
+    return {"message": "Welcome to the QR Code Generator API"}
 # Allowing CORS for local testing
 origins = [
     "http://localhost:3000"
@@ -24,7 +28,7 @@ app.add_middleware(
 
 # AWS S3 Configuration
 s3 = boto3.client('s3')
-bucket_name = 'YOUR_BUCKET_NAME' # Add your bucket name here
+bucket_name = 'jdk-first-s3' # Add your bucket name here
 
 @app.post("/generate-qr/")
 async def generate_qr(url: str):
