@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 #Build the Next.js application
-RUN npm run Build
+RUN npm run build
 
 #Expose the port that Next.js runs on
 EXPOSE 3000
