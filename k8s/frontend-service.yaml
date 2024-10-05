@@ -10,7 +10,7 @@ spec:
   - name: "frontend-service"
     port: 5001
     targetPort: 80
-    NodePort: 31001
+    nodePort: 31001
   selector:
     app: frontend
 
