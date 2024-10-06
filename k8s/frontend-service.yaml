@@ -5,11 +5,11 @@ metadata:
     app: frontend
   name: frontend
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
   - name: "frontend-service"
     port: 80
-    targetPort: 80
+    targetPort: 3000
     nodePort: 31001
   selector:
     app: frontend
