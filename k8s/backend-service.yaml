@@ -8,7 +8,7 @@ spec:
   type: ClusterIP
   ports:
   - name: "backend-service"
-    port: 8000
+    port: 8080
     targetPort: 8000
   selector:
     app: backend
