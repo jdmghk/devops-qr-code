@@ -44,7 +44,7 @@ jobs:
 
     - name: Update Kubeconfig for EKS
       run: |
-        aws eks update-kubeconfig --name cluster1 --region us-east-1
+        aws eks update-kubeconfig --name devops-capstone-project --region us-east-1
 
     - name: Deploy to Kubernetes
       run: | 
