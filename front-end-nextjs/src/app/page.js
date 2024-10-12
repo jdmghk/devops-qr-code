@@ -11,7 +11,7 @@ export default function Home() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://backend-service/generate-qr/?url=${url}`
+        `/api/generate-qr/?url=${url}`
       );
       setQrCodeUrl(response.data.qr_code_url);
     } catch (error) {
